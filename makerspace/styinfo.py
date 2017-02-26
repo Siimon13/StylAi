@@ -7,14 +7,16 @@ StyAiconcepts = ['arty','business','casual','chic','elegant','female','goth','pr
 
 app = ClarifaiApp(client_id, client_secret)
 
-query = app.inputs.search_by_predicted_concepts(concepts=['men','boot'])
+query = app.inputs.search_by_predicted_concepts(concepts=['streetwear', 'female'], values=[True,True])
+
 
 
 print len(query)
 
 for q in query:
+    pass
     # model = app.models.get("general-v1.3")
     pprint(vars(q))
-    print
+    # print
     # raw_input()
 

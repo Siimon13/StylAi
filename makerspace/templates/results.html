@@ -47,81 +47,92 @@
                     <a class="navbar-brand" href="/">StylAi</a>
 		</div>
 		<!-- Collect the nav links, forms, and other content for toggling -->
-		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-			<li>
-                            <a href="about.html">About</a>
-			</li>
-			<li>
-                            <a href="services.html">Services</a>
-			</li>
-			<li>
-                            <a href="contact.html">Contact</a>
-			</li>
-			<li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-				<li>
-                                    <a href="portfolio-1-col.html">1 Column Portfolio</a>
-				</li>
-				<li>
-                                    <a href="portfolio-2-col.html">2 Column Portfolio</a>
-				</li>
-				<li>
-                                    <a href="portfolio-3-col.html">3 Column Portfolio</a>
-				</li>
-				<li>
-                                    <a href="portfolio-4-col.html">4 Column Portfolio</a>
-				</li>
-				<li>
-                                    <a href="portfolio-item.html">Single Portfolio Item</a>
-				</li>
-                            </ul>
-			</li>
-			<li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-				<li>
-                                    <a href="blog-home-1.html">Blog Home 1</a>
-				</li>
-				<li>
-                                    <a href="blog-home-2.html">Blog Home 2</a>
-				</li>
-				<li>
-                                    <a href="blog-post.html">Blog Post</a>
-				</li>
-                            </ul>
-			</li>
-			<li class="dropdown">
-                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
-                            <ul class="dropdown-menu">
-				<li>
-                                    <a href="full-width.html">Full Width Page</a>
-				</li>
-				<li>
-                                    <a href="sidebar.html">Sidebar Page</a>
-				</li>
-				<li>
-                                    <a href="faq.html">FAQ</a>
-				</li>
-				<li>
-                                    <a href="404.html">404</a>
-				</li>
-				<li>
-                                    <a href="pricing.html">Pricing Table</a>
-				</li>
-                            </ul>
-			</li>
-                    </ul>
-		</div>
-		<!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
+		<!-- <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                     <ul class="nav navbar-nav navbar-right">
+		     <li>
+                     <a href="about.html">About</a>
+		     </li>
+		     <li>
+                     <a href="services.html">Services</a>
+		     </li>
+		     <li>
+                     <a href="contact.html">Contact</a>
+		     </li>
+		     <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Portfolio <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+		     <li>
+                     <a href="portfolio-1-col.html">1 Column Portfolio</a>
+		     </li>
+		     <li>
+                     <a href="portfolio-2-col.html">2 Column Portfolio</a>
+		     </li>
+		     <li>
+                     <a href="portfolio-3-col.html">3 Column Portfolio</a>
+		     </li>
+		     <li>
+                     <a href="portfolio-4-col.html">4 Column Portfolio</a>
+		     </li>
+		     <li>
+                     <a href="portfolio-item.html">Single Portfolio Item</a>
+		     </li>
+                     </ul>
+		     </li>
+		     <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blog <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+		     <li>
+                     <a href="blog-home-1.html">Blog Home 1</a>
+		     </li>
+		     <li>
+                     <a href="blog-home-2.html">Blog Home 2</a>
+		     </li>
+		     <li>
+                     <a href="blog-post.html">Blog Post</a>
+		     </li>
+                     </ul>
+		     </li>
+		     <li class="dropdown">
+                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Other Pages <b class="caret"></b></a>
+                     <ul class="dropdown-menu">
+		     <li>
+                     <a href="full-width.html">Full Width Page</a>
+		     </li>
+		     <li>
+                     <a href="sidebar.html">Sidebar Page</a>
+		     </li>
+		     <li>
+                     <a href="faq.html">FAQ</a>
+		     </li>
+		     <li>
+                     <a href="404.html">404</a>
+		     </li>
+		     <li>
+                     <a href="pricing.html">Pricing Table</a>
+		     </li>
+                     </ul>
+		     </li>
+                     </ul>
+		     </div>
+		     <!-- /.navbar-collapse -->
+		<!-- </div> --> -->
+		<!-- /.container -->
 	</nav>
 
+	<div class="col-lg-12">
+            <h1 class="page-header">
+		<img src="{% static 'img/icons/logo.png' %}">
+
+            </h1>
+	    <h4 class="page-caption">
+		Unleash your inner style
+	    </h4>
+	    <br>
+	</div>
+
 	{% csrf_token %}
-	<form class="form-inline" method="POST" >
-	    <div class="col-md-6">
+	<form class="form-inline" method="POST" style="padding-top:5%;">
+	    <div class="col-md-3">
 		<select class="form-control" id="gender" name="gender" required>
 		    <option selected disabled> Select your gender </option>
 		    <option> Male </option>
@@ -129,20 +140,50 @@
 		</select>
 	    </div>
 
-	    <div class="col-md-6">
-		<label class="checkbox-inline"><input type="checkbox" value="streetwear" name="concepts">Streetwear</label>
-		<label class="checkbox-inline"><input type="checkbox" value="arty" name="concepts">Arty</label>
-		<label class="checkbox-inline"><input type="checkbox" value="business" name="concepts">Business</label>
-		<label class="checkbox-inline"><input type="checkbox" value="casual" name="concepts">Casual</label>
-		<br>
-		<label class="checkbox-inline"><input type="checkbox" value="goth" name="concepts">Goth</label>
-		<label class="checkbox-inline"><input type="checkbox" value="preppy" name="concepts">Preppy</label>
-		<label class="checkbox-inline"><input type="checkbox" value="elegant" name="concepts">Elegant</label>
-		<label class="checkbox-inline"><input type="checkbox" value="chic" name="concepts">Chic</label>
+	    <div class="col-md-3" style="text-align:center">
+		<select class="form-control" id="style" name="style">
+		    <option selected disabled> Select your style </option>
+		    <option> Streetwear </option>
+		    <option> Arty </option>
+		    <option> Business </option>
+		    <option> Casual </option>
+		    <option> Goth </option>
+		    <option> Preppy </option>
+		    <option> Elegant </option>
+		    <option> Chic </option>
+		</select>
 	    </div>
-		    
-	    <br>
-	    <div class ="col-md-12"style="text-align:center;">
+
+	    <div class="col-md-6" style="float:left;">
+		Select Your Colors:
+
+		<div class="col-xs-1"> </div>
+		<input type='color' name='color1' value="" />
+
+		<div class="col-xs-1"> </div>
+		<input type='color' name='color2' value='' />
+
+		<div class="col-xs-1"> </div>
+		<input type='color' name='color3' value='' />
+
+		
+	    </div>
+
+	    <!-- <div class="col-md-8">
+		 <h4>Select Your Styles: </h4>
+		 <br>
+		 <label class="checkbox-inline"><input type="checkbox" value="streetwear" name="concepts">Streetwear</label>
+		 <label class="checkbox-inline"><input type="checkbox" value="arty" name="concepts">Arty</label>
+		 <label class="checkbox-inline"><input type="checkbox" value="business" name="concepts">Business</label>
+		 <label class="checkbox-inline"><input type="checkbox" value="casual" name="concepts">Casual</label>
+		 <br>
+		 <label class="checkbox-inline"><input type="checkbox" value="goth" name="concepts">Goth</label>
+		 <label class="checkbox-inline"><input type="checkbox" value="preppy" name="concepts">Preppy</label>
+		 <label class="checkbox-inline"><input type="checkbox" value="elegant" name="concepts">Elegant</label>
+		 <label class="checkbox-inline"><input type="checkbox" value="chic" name="concepts">Chic</label>
+		 </div>
+	       -->
+	    <div class ="col-md-12" style="text-align:center; padding-top:10%">
 		<button type="submit" class="btn btn-primary" name = "submitting"> Find Your Style</button>
 	    </div>
 	</form>
@@ -155,10 +196,22 @@
 
 	    {% for i in info %}
 
-	    <div class="col-md-4 col-sm-6">
-		<a href="portfolio-item.html">
-		    <img class="img-responsive img-portfolio img-hover" src={{i.src}} alt="">
+	    <div class="col-md-4 col-sm-5">
+		<a href="http://lookbook.nu/search?q={{concepts}}">
+		    <img class="img-responsive img-portfolio img-hover" src={{i.src}} alt="" style="padding-left: 5%;">
+
 		</a>
+
+		<div class="color">
+		    <div class="col-xs-6 color-block" style="background:{{i.color1}};"> </div>
+		    <div class="col-xs-1"> </div>
+		    <!-- --> 
+		    <div class="col-xs-6 color-block" style="background:{{i.color2}};"> </div>
+		    <div class="col-xs-1"> </div>
+		    <!-- -->
+		    <div class="col-xs-6 color-block" style="background:{{i.color3}};"> </div>
+		</div>
+		
 	    </div>
 	
 	    {% endfor %}
