@@ -1,0 +1,128 @@
+/*!
+ * Start Bootstrap - Modern Business (http://startbootstrap.com/)
+ * Copyright 2013-2016 Start Bootstrap
+ * Licensed under MIT (https://github.com/BlackrockDigital/startbootstrap/blob/gh-pages/LICENSE)
+ */
+
+/* Global Styles */
+
+html,
+body {
+    height: 100%;
+}
+
+.navbar-brand {
+    font-size:32px;
+}
+
+body {
+    padding-top: 50px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+}
+.img-box {
+    width:250px;
+    height:200px;
+}
+
+.img-portfolio {
+    text-align:center;
+    margin-bottom: 30px;
+}
+
+.img-hover:hover {
+    opacity: 0.8;
+}
+
+/* Home Page Carousel */
+
+header.carousel,
+header.carousel slide{
+    height: 100%;
+    max-width: 100%;
+}
+
+header.carousel .item,
+header.carousel .item.active,
+header.carousel .carousel-inner {
+    height: 100%;
+    max-width: 100%;
+}
+
+header.carousel .fill {
+    height: 100%;
+    max-width: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+.carousel-caption{
+    color: white;
+    text-shadow: 2px 2px black;
+
+}
+
+/* Body */
+.page-header,
+.page-caption{
+    text-align:center;
+}
+
+.color {
+    display: inline-block;
+    padding-left:12%;
+}
+
+.color-block{
+
+    width:30px;
+    height:30px;
+}
+
+/* 404 Page Styles */
+
+.error-404 {
+    font-size: 100px;
+}
+
+/* Pricing Page Styles */
+
+.price {
+    display: block;
+    font-size: 50px;
+    line-height: 50px;
+}
+
+.price sup {
+    top: -20px;
+    left: 2px;
+    font-size: 20px;
+}
+
+.period {
+    display: block;
+    font-style: italic;
+}
+
+/* Footer Styles */
+
+footer {
+    margin: 50px 0;
+}
+
+/* Responsive Styles */
+
+@media(max-width:991px) {
+    .customer-img,
+    .img-related {
+        margin-bottom: 30px;
+    }
+}
+
+@media(max-width:767px) {
+    .img-portfolio {
+        margin-bottom: 15px;
+    }
+
+    header.carousel .carousel {
+        height: 70%;
+    }
+}

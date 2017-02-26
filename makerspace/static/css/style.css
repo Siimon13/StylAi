@@ -1,0 +1,487 @@
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.navbar-brand>img{
+    height: 60%;
+    /* margin: auto; */
+    width: auto;
+    position: relative;
+    top: 20%;
+}
+
+#logo-part-1 {
+    display: inline;
+    font-family: "Arial Black", Gadget, sans-serif;
+}
+
+#logo-part-2 {
+    display: inline;
+    font-family: "Arial", Gadget, sans-serif;
+}
+
+.navbar-header {
+    width: 200px;
+}
+
+.navbar-toggle .icon-bar {
+    background-color: white;
+}
+
+.navbar-NYU {
+    background: #57068C;
+}
+
+.navbar-NYU .navbar-brand {
+    color: white;
+    font-size: 30px;
+    height: 90px;
+    line-height: 110%;
+}
+
+.navbar-NYU .nav li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-NYU .nav li a {
+    color: white;
+    height: 90px;
+    font-size: 16px;
+}
+
+.navbar-NYU > li.navbar-right {
+    color: white;
+    height: 90px;
+    font-size: 16px;
+    float: right !important;
+}
+
+.nav-pills>li.active>a {
+    background-color: #402165;
+}
+
+.navbar-NYU .nav li a:hover {
+    background-color: #402165;
+    text-decoration: none;
+}
+
+#home {
+    margin-top: 100px;
+}
+
+#intro-video {
+    width: 100%;
+    height: auto;
+}
+
+#stream {
+    background-color: #8901E1;
+    padding: 10% 5%;
+
+}
+
+#about,
+#spaces {
+    /* padding: 8% 0%; */
+    /* width: 100%; */
+    background-color: #8901E1;
+    color: white;
+}
+
+.container-fluid{
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+@media (min-width: 800px){
+    #about-text{
+	font-weight: lighter;
+	font-size: medium;
+	line-height: 100%;
+	position: relative;
+    /* margin-top: 90%; */
+    }
+}
+
+@media (min-width: 1000px){
+
+    #about-text{
+	/* font-weight: lighter; */
+	/* font-size: medium; */
+	/* line-height: 100%; */
+	/* position: relative; */
+	margin-top: 80%;
+    }
+}
+
+#about-img{
+    /* border-radius: 100%; */
+    marigin: 0% 0%;
+    padding: 0% 0%;
+    /* padding-right: 0px; */
+    max-height: 100%;
+    max-width: 100%;
+
+}
+
+#equipment-header,
+#spaces-header,
+#events-header,
+#contact-header,
+#stream-header,
+#credits-header {
+    margin: auto;
+    /* text-align: center; */
+    padding-top: 10px;
+    padding-left: 10%;
+}
+
+#device-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+#device-button {
+    display: inherit;
+    justify-content: center;
+    align-content: center;
+    width: 155px;
+    height: 155px;
+    background-color: white;
+    border-color: white;
+    border-radius: 100%;
+    border: 5px solid;
+    border-color: darkgrey;
+}
+
+#icon-container {
+    width: inherit;
+}
+
+#device-container h3 {
+    padding-top: 10px;
+    width: 150px;
+    text-align: center;
+    color: black;
+    margin: auto;
+}
+
+.img-rounded {
+    width: 100px;
+    height: 100px;
+    margin: auto;
+}
+
+#device-button:hover {
+    border-color: #f1c232;
+}
+
+.modal-header h2 {
+    text-align: center;
+}
+
+.modal-content {
+    padding: 10px;
+}
+
+#modal-equipment-container {
+    width: 90%;
+}
+
+#carousel-3d-printer,
+#cnc-carousel,
+#machineshop-carousel,
+#more-carousel,
+#laser-carousel,
+#chip-carousel {
+    width: 75%;
+    margin: auto;
+}
+
+#carousel-3d-printer ol li,
+#cnc-carousel ol li,
+#machineshop-carousel ol li,
+#more-carousel ol li,
+#laser-carousel ol li,
+#chip-carousel ol li {
+    background-color: black;
+}
+
+#cnc-carousel h3,
+#chip-carousel h3,
+#machineshop-carousel h3,
+#more-carousel h3 {
+    color: white;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: black;
+}
+
+#spaces {
+    padding: 0% 0%;
+    background-color: #8901E1;
+    color: white;
+}
+
+#spaces-header {
+    float: left;
+    padding-top:20%;
+    padding-left:10%;
+/* padding-top:15%; */
+/* padding-bottom: 10px; */
+}
+
+#spaces-carousel {
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    
+/* float: right; */
+}
+
+
+/* center images from carousel*/
+
+img {
+    width: 100%;
+}
+.item {
+    width: 100%;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    width: 100%;
+    margin: auto;
+}
+
+#events {
+    padding-bottom: 30px;
+    background-color: #140021;
+}
+
+#event-head {
+    text-align: left;
+    color: white;
+    background-color: #f1c232;
+    line-height: 80px;
+    height: 80px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    padding-left:5%;
+/* color: #140021; */
+
+}
+
+#events-header {
+    padding-bottom: 20px;
+    color: white;
+}
+
+#event-name{
+    padding: 0;
+    marigin: 0;
+}
+
+#event-descp{
+
+}
+
+
+#event-container {
+    padding: 10px 0px;
+}
+
+#event-img-container {
+    text-align: center;
+    background-color: white;
+    font-weight: 50;
+    line-height: 220px;
+    max-height: 300px;
+    height: auto;
+    height: 300px;
+    color: #140021;
+
+}
+
+#live-stream {
+    text-align: center;
+}
+
+#button-live-stream {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+    text-align: center;
+    background-color: #f1c232;
+    color: white;
+    border-radius: 200px;
+}
+
+#contact {
+    padding: 20px;
+}
+
+#contact-header {
+    padding-bottom: 20px;
+    color: #323232;
+}
+
+#options-container,
+#mesage-container {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#name,
+#email,
+#subject,
+#message,
+#submit-btn {
+    border: none;
+    border-bottom: 2px solid;
+    border-bottom-color: #8901E1;
+    padding: 10px;
+    margin: 16px;
+    width: 90%;
+}
+
+::-webkit-input-placeholder {
+    color: darkgray;
+}
+
+:-moz-placeholder {
+    /* Firefox 18- */
+    color: darkgray;
+}
+
+::-moz-placeholder {
+    /* Firefox 19+ */
+    color: darkgray;
+}
+
+:-ms-input-placeholder {
+    color: darkgray;
+}
+
+#message {
+    height: 200px;
+    padding: 10px;
+    margin: 5px;
+    border: 2px solid;
+    border-color: #8901E1;
+}
+
+#submit-btn {
+    color: white;
+    background-color: #8901E1;
+    border-radius: 20px;
+}
+
+#map {
+    background-color: #140021;
+    padding: 20px;
+    color: white;
+}
+
+#google-map {
+    width: 100%;
+    height: 300px;
+}
+
+#footer {
+    background-color: #140021;
+    display: flex;
+    align-items: flex-end;
+}
+
+#social-icon {
+    width: 11%;
+    height: auto;
+    margin: 20px 10%;
+}
+
+#copyright {
+    color: #bcbcbc;
+    font-size: 18px;
+}
+
+#button-credits {
+    margin: auto;
+    border: 0px;
+    background-color: inherit;
+    text-decoration: underline;
+}
+
+#button-credits:hover {
+    font-weight: lighter;
+}
+
+@media only screen and (max-width: 992px) {
+    #about-img {
+	margin: 0% 0%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .navbar-header {
+	display: inline-block;
+	width: 250px;
+	margin-top: 15px;
+	padding: 0px;
+	height: 50px;
+    }
+    .navbar-NYU .navbar-brand {
+	font-size: 24px;
+    }
+    #menu-button {
+	margin-top: 25px;
+	display: inline-block;
+    }
+    .navbar-NYU .nav li a {
+	height: 50px;
+    }
+    #about-header,
+    #equipment-header,
+    #spaces-header {
+	display: block;
+	font-size: 28px;
+    }
+    #about-text {
+	font-size: 12px;
+    }
+    #about-img {
+	margin: 0% 0%;
+    }
+    #device-container {
+	padding: 25px;
+    }
+    #spaces-carousel {
+	width: auto;
+    }
+    .carousel-caption h3 {
+	font-size: 18px;
+    }
+    .carousel-caption p {
+	display: none;
+    }
+    #subject,
+    #email,
+    #name {
+	margin: 5px;
+    }
+}

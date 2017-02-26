@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    {% load static %}
+
+    <head>
+	<title>MakerSpace</title>
+
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!-- jQuery -->
+	<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+	<!-- Bootstrap JS -->
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+	<!-- Own Script -->
+	<!-- <script type="text/javascript" src="js/script.js"></script> -->
+	<script type="text/javascript" src="{% static 'js/script.js' %}"></script>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<!-- CSS files-->
+	<!-- <link href="css/style.css" type="text/css" rel="stylesheet" /> -->
+	<link href="{%static 'css/style.css' %}" type="text/css" rel="stylesheet" />
+
+    </head>
+
+    <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+	<!-- Body -->
+	<nav class="navbar navbar-NYU navbar-fixed-top">
+            <div class="container-fluid" id="navbar-center">
+		<div class="navbar-header">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <!-- <div><a class="navbar-brand" href="#">NYU <div id="logo-part-1">Maker</div><div id="logo-part-2">Space</div></a></div> -->
+		    <div><a class="navbar-brand" href="#"><img src="{%static 'img/icons/logo.png' %}"></a></div>
+			
+		</div>
+		<button type="button" id="menu-button" class="navbar-toggle collapsed navbar-right" data-toggle="collapse" data-target="#my-nav" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+		</button>
+		<div class="collapse navbar-collapse" id="my-nav">
+                    <ul class="nav nav-pills nav-left">           
+
+         		<!-- <ul class="nav nav-pills nav-justified"> -->
+			<li class="navbar-right"><a href="#contact">Contact</a></li>
+			<li class="navbar-right"><a href="#stream">Live Stream</a></li>
+			<li class="navbar-right"><a href="#events">Events</a></li>
+			<li class="navbar-right"><a href="#spaces">Spaces</a></li>
+			<li class="navbar-right"><a href="#equipment">Equipment</a></li>
+			<li class="navbar-right"><a href="#about">About</a></li>		
+		    </ul>
+		</div>
+            </div>
+	</nav>
+
+	<!-- Container of the body -->
+	<div class="container-fluid">
+            <div class="row" id="home">
+		<div class="col-xs-12">
+                    <!-- <video id="intro-video" preload="true" autoplay="autoplay" volume="0" poster="%static 'img/whiteIntro.png' %"> -->
+		    <video id="intro-video" preload="true" autoplay="autoplay" volume="0" poster="{%static 'img/whiteIntro.png' %}">
+			<source src="{%static 'vids/whiteIntro.mp4' %}" type="video/mp4">
+			<source src="{%static 'vids/whiteIntro.webm' %}" type="video/webm">
+			<source src="{%static 'vids/whiteIntro.ogvv' %}" type="video/ogg">
+		    </video>
+		</div>
+            </div>
+	</div>
+	
+	<!-- About Section -->
+	<div class="container-fluid">
+	    <div class="row"  id="about">
+		<div class="col-md-4">
+		    <h1 id="about-header">About</h1>
+
+
+		    <!-- <div class="col-md-1"></div> -->
+		    <p id="about-text">The NYU Tandon School of Engineering MakerSpace is a new, collaborative work space and lab on the Brooklyn campus. It highlights new kinds of iterative, interdisciplinary teamwork using cutting-edge tools of rapid prototyping and digitally driven production. The MakerSpace is located on the ground floor of Rogers Hall. </p>
+		</div>
+
+		<div class="col-md-8">
+
+		    <div id="about-img">
+			<div class="row"> 
+			    <!-- <img src="{%static 'img/about-img-900.jpg' %}"  class="img-responsive"> -->
+			    <img src="{%static 'img/about-img.jpg' %}"  class="img-responsive">
+			</div>
+		    </div>
+
+		</div>
+	    </div>
+	</div>
+
+	<!-- Equipment -->
+	<div class="row" id="equipment">
+	    <div class="col-xs-12">
+		<h1 id="equipment-header">Equipment</h1>
+	    </div>
+	    <div class="col-xs-12 col-sm-6 col-md-4" id="device-container">
+
+		<!-- Button -->
+
+		<button type="button" id="device-button" data-toggle="modal" data-target="#modal-3d-printers">
+		    <div id="icon-container">
+			<img id="icon-3d-printer" class="svg img-rounded" src="{%static 'img/icons/3d-printer-printing-letters.svg' %}" alt="3D printers icon">
+		    </div>
+		</button>
+		<h3>3D Printers</h3>
+		<!-- Modal -->
+
+		<div class="modal fade" id="modal-3d-printers" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-lg" id="modal-equipment-container">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">3D-Printers</h2>
+			    </div>
+			    <div class="modal-body">
+
+				<!-- carousel 3d printers -->
+				<div class="container">
+				    <br>
+				    <div id="carousel-3d-printer" class="carousel slide">
+					<ol class="carousel-indicators">
+					    <li class="item1 active"></li>
+					    <li class="item2"></li>
+					    <li class="item3"></li>
+					    <li class="item4"></li>
+					    <li class="item5"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+					    <div class="item active">
+						<img src="{%static 'img/equipment/3d-printers/resized/ultimaker.jpg" alt="Picture of Ultimaker printer' %}">
+						<div class="carousel-caption">
+						    <h3>Ultimaker</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static  'img/equipment/3d-printers/resized/Elite.jpg" alt="Picture of Elite printer' %}">
+						<div class="carousel-caption">
+						    <h3>Elite</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/3d-printers/resized/Fortus.jpg" alt="Picture of Fortus printer' %}">
+						<div class="carousel-caption">
+						    <h3>Fortus</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/3d-printers/resized/Mojo.jpg" alt="Picture of Mojo printer' %}">
+						<div class="carousel-caption">
+						    <h3>Mojo</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/3d-printers/resized/Objet30.jpg" alt="Picture of Objet30 Printer' %}">
+						<div class="carousel-caption">
+						    <h3>Objet30</h3>
+						</div>
+					    </div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					</a>
+				    </div>
+				</div>
+				<!-- End carousel 3d printers -->
+			    </div>
+			</div>
+		    </div>
+		</div>
+
+	    </div>
+	    <div class="col-xs-12 col-sm-6 col-md-4" id="device-container">
+		<button type="button" id="device-button" data-toggle="modal" data-target="#modal-laser-cutter">
+		    <div id="icon-container">
+			<img id="icon-laser-cutter" class="svg img-rounded" src="{%static 'img/icons/laser-machine.svg' %}" alt="Laser Cutter icon">
+		    </div>
+		</button>
+		<h3>Laser Cutters</h3>
+		<div class="modal fade" id="modal-laser-cutter" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-lg" id="modal-equipment-container">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Laser Cutters</h2>
+			    </div>
+			    <div class="modal-body">
+
+				<!-- carousel Laser Cuttersl -->
+				<div class="container">
+				    <br>
+				    <div id="laser-carousel" class="carousel slide">
+					<ol class="carousel-indicators">
+					    <li class="item1 active"></li>
+					    <li class="item2"></li>
+					    <li class="item3"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+					    <div class="item active">
+						<img src="{%static 'img/equipment/laser-cutters/resized/laser-cutter-60.jpg" alt="Picture of Laser cutter 60 watts' %}">
+						<div class="carousel-caption">
+						    <h3>60 Watt Laser Cutter</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/laser-cutters/resized/laser-cutter-m2.jpg" alt="Picture of Laser cutter M2' %}">
+						<div class="carousel-caption">
+						    <h3>75 Watt Laser Cutter</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/laser-cutters/resized/laser-cutter-universal.jpg" alt="Picture of Universal Laser Cutter' %}">
+						<div class="carousel-caption">
+						    <h3>Universal Laser Cutter</h3>
+						</div>
+					    </div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					</a>
+				    </div>
+				</div>
+				<!-- End carousel laser cutter -->
+			    </div>
+			</div>
+		    </div>
+		</div>
+
+
+	    </div>
+	    <div class="col-xs-12 col-sm-6 col-md-4" id="device-container">
+		<button type="button" id="device-button" data-toggle="modal" data-target="#modal-cnc-machine">
+		    <div id="icon-container">
+			<img id="icon-cnc-machine" class="svg img-rounded" src="{%static 'img/icons/cnc_machine.svg' %}" alt="CNC Machine icon">
+		    </div>
+		</button>
+		<h3>CNC Machines</h3>
+		<div class="modal fade" id="modal-cnc-machine" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-lg" id="modal-equipment-container">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">CNC Machines</h2>
+			    </div>
+			    <div class="modal-body">
+				<!-- carousel CNC Machines -->
+				<div class="container">
+				    <br>
+				    <div id="cnc-carousel" class="carousel slide">
+					<ol class="carousel-indicators">
+					    <li class="item1 active"></li>
+					    <li class="item2"></li>
+					    <li class="item3"></li>
+					    <li class="item4"></li>
+					    <li class="item5"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+					    <div class="item active">
+						<img src="{%static 'img/equipment/cnc-machines/resized/othermill.jpg' %}" alt="Picture of Othermill">
+						<div class="carousel-caption">
+						    <h3>Othermill</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/cnc-machines/resized/vinyl-cutter.jpg' %}" alt="Picture of Vinyl Cutter">
+						<div class="carousel-caption">
+						    <h3>Vinyl Cutter</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/cnc-machines/resized/wire-bender.jpg' %}" alt="Picture of Wire Bender">
+						<div class="carousel-caption">
+						    <h3>Wire Bender</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/cnc-machines/resized/wardjet.jpg' %}" alt="Picture of Water Jet">
+						<div class="carousel-caption">
+						    <h3>Wardjet</h3>
+						</div>
+					    </div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					</a>
+				    </div>
+				</div>
+				<!-- End carousel CNC machines -->
+			    </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	    <div class="col-xs-12 col-sm-6 col-md-4" id="device-container">
+		<button type="button" id="device-button" data-toggle="modal" data-target="#modal-chip">
+		    <div id="icon-container">
+			<img id="icon-chip" class="svg img-rounded" src="{%static 'img/icons/microchip.svg' %}" alt="Electrical and Computing icon">
+		    </div>
+		</button>
+		<h3>Electrical and Computing</h3>
+		<div class="modal fade" id="modal-chip" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-lg" id="modal-equipment-container">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Devices at the Electrical Engineering area</h2>
+			    </div>
+			    <div class="modal-body">
+
+				<!-- carousel Electrical and Computing carousel -->
+				<div class="container">
+				    <br>
+				    <div id="chip-carousel" class="carousel slide">
+					<ol class="carousel-indicators">
+					    <li class="item1 active"></li>
+					    <li class="item2"></li>
+					    <li class="item3"></li>
+					    <li class="item4"></li>
+					    <li class="item5"></li>
+					    <li class="item6"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+					    <div class="item active">
+						<img src="{%static 'img/equipment/electrical-and-computing/resized/arduino.jpg' %}" alt="Picture of Arduino">
+						<div class="carousel-caption">
+						    <h3>Arduinos</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/electrical-and-computing/resized/raspberry-pi.jpg' %}" alt="Picture of Raspberry Pi">
+						<div class="carousel-caption">
+						    <h3>Raspberry Pi</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/electrical-and-computing/resized/lpkf.jpg' %}" alt="Picture of LPKF">
+						<div class="carousel-caption">
+						    <h3>LPKF</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment//electrical-and-computing/resized/oscilloscope.jpg' %}" alt="Picture of Oscilloscope">
+						<div class="carousel-caption">
+						    <h3>Oscilloscope</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/electrical-and-computing/resized/pcb-printer.jpg' %}" alt="Picture of PCB Printer">
+						<div class="carousel-caption">
+						    <h3>PCB Printer</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/electrical-and-computing/resized/pick-n-place.jpg' %}" alt="Picture of Pick and Place Machine">
+						<div class="carousel-caption">
+						    <h3>Pick and Place Machine</h3>
+						</div>
+					    </div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					</a>
+				    </div>
+				</div>
+				<!-- End Electrical and Computing carousel  -->
+			    </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	    <div class="col-xs-12 col-sm-6 col-md-4" id="device-container">
+		<button type="button" id="device-button" data-toggle="modal" data-target="#modal-machine-shop">
+		    <div id="icon-container">
+			<img id="icon-machineshop" class="svg img-rounded" src="{%static 'img/icons/industrial-robot.svg' %}" alt="MachineShop icon">
+		    </div>
+		</button>
+		<h3>Machine Shop</h3>
+		<div class="modal fade" id="modal-machine-shop" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-lg" id="modal-equipment-container">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">Machine Shop</h2>
+			    </div>
+			    <div class="modal-body">
+				<!-- carousel Machine Shop -->
+				<div class="container">
+				    <br>
+				    <div id="machineshop-carousel" class="carousel slide">
+					<ol class="carousel-indicators">
+					    <li class="item1 active"></li>
+					    <li class="item2"></li>
+					    <li class="item3"></li>
+					    <li class="item4"></li>
+					    <li class="item5"></li>
+					    <li class="item6"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+					    <div class="item active">
+						<img src="{%static 'img/equipment/MachineShop/resized/batch-reflow-oven.jpg' %}" alt="Picture of Batch reflow Oven">
+						<div class="carousel-caption">
+						    <h3>Batch reflow Oven</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/MachineShop/resized/scientific-box-furnance.jpg' %}" alt="Picture of Scientific Box Furnance">
+						<div class="carousel-caption">
+						    <h3>Scientific Box Furnance</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/MachineShop/resized/grieve_oven.jpg' %}" alt="Picture of Grieve Oven">
+						<div class="carousel-caption">
+						    <h3>Grieve Oven</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/MachineShop/resized/plastic-injecting-machine.jpg' %}" alt="Picture of Plastic Injecting Machine">
+						<div class="carousel-caption">
+						    <h3>Plastic Injecting Machine</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/MachineShop/resized/shaker.jpg' %}" alt="Picture of Shaker">
+						<div class="carousel-caption">
+						    <h3>Shaker</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/MachineShop/resized/x-ray.jpg' %}" alt="Picture of X-Ray Scanner">
+						<div class="carousel-caption">
+						    <h3>X-Ray Scanner</h3>
+						</div>
+					    </div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					</a>
+				    </div>
+				</div>
+				<!-- End carousel Machine Shop  -->
+			    </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+	    <div class="col-xs-12 col-sm-6 col-md-4" id="device-container">
+		<button type="button" id="device-button" data-toggle="modal" data-target="#modal-more">
+		    <div id="icon-container">
+			<img id="icon-more" class="svg img-rounded" src="{%static 'img/icons/micellaneous.svg' %}" alt="Micellaneous Techonolgies icon">
+		    </div>
+		</button>
+		<h3>More...</h3>
+		<div class="modal fade" id="modal-more" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+		    <div class="modal-dialog modal-lg" id="modal-equipment-container">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+				<h2 class="modal-title">More Devices</h2>
+			    </div>
+			    <div class="modal-body">
+
+				<!-- carousel more-devices -->
+				<div class="container">
+				    <br>
+				    <div id="more-carousel" class="carousel slide">
+					<ol class="carousel-indicators">
+					    <li class="item1 active"></li>
+					    <li class="item2"></li>
+					    <li class="item3"></li>
+					    <li class="item4"></li>
+					    <li class="item5"></li>
+					</ol>
+
+					<!-- Wrapper for slides -->
+					<div class="carousel-inner" role="listbox">
+					    <div class="item active">
+						<img src="{%static 'img/equipment/More/resized/3d-scanner.jpg' %}" alt="Picture of 3D Scanner">
+						<div class="carousel-caption">
+						    <h3>3D Scanner</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/More/resized/filament-extruder.jpg' %}" alt="Picture of Filament Extruder">
+						<div class="carousel-caption">
+						    <h3>Filament Extruder</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/More/resized/sewing-machine.jpg' %}" alt="Picture of Sewing Machine">
+						<div class="carousel-caption">
+						    <h3>Sewing Machine</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/More/resized/soldering-station.jpg' %}" alt="Picture of Soldering Station">
+						<div class="carousel-caption">
+						    <h3>Soldering Station</h3>
+						</div>
+					    </div>
+
+					    <div class="item">
+						<img src="{%static 'img/equipment/More/resized/vacuum-former.jpg' %}" alt="Picture of Vacuum former">
+						<div class="carousel-caption">
+						    <h3>Vacuum Former</h3>
+						</div>
+					    </div>
+					</div>
+
+					<!-- Left and right controls -->
+					<a class="left carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					</a>
+					<a class="right carousel-control" role="button">
+					    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					</a>
+				    </div>
+				</div>
+				<!-- End carousel More<!--  --> -->
+			    </div>
+			</div>
+		    </div>
+		</div>
+	    </div>
+
+	</div>
+
+	<!-- Carousel Section -->
+	<div class="container-fluid">
+
+	    <div class="row" id="spaces">
+		<div class= "col-md-4">
+		 
+		    <h1 id="spaces-header">
+			Spaces
+		    </h1>
+
+		</div>
+		
+		<div class="col-md-8">
+		    <!-- <div class="col-xs-12" ""> -->
+		    <div class="row">
+			<div id="spaces-carousel" class="carousel slide">
+			    <ol class="carousel-indicators">
+				<li class="item1 active"></li>
+				<li class="item2"></li>
+				<li class="item3"></li>
+				<li class="item4"></li>
+				<li class="item5"></li>
+			    </ol>
+
+			    <!-- Wrapper for slides -->
+			    <div class="carousel-inner" role="listbox">
+				<div class="item active">
+				    <img src="{%static 'img/makerspace-general.jpg' %}" alt="Picture of MakerSpace">
+				    <div class="carousel-caption">
+					<h3>MakerSpace</h3>
+					<p>A place where the future is now</p>
+				    </div>
+				</div>
+
+				<div class="item">
+				    <img src="{%static 'img/EventSpace.jpg' %}" alt="Picture of EventSpace">
+				    <div class="carousel-caption">
+					<h3>EventSpace</h3>
+					<p>Pitching the companies of tomorrow</p>
+				    </div>
+				</div>
+
+				<div class="item">
+				    <img src="{%static 'img/Greenhouse.jpg' %}" alt="Picture of Greenhouse">
+				    <div class="carousel-caption">
+					<h3>Greenhouse</h3>
+					<p>Harvesting the ideas for a better world</p>
+				    </div>
+				</div>
+
+				<div class="item">
+				    <img src="{%static 'img/MachineShop.jpg' %}" alt="Picture of MachineShop">
+				    <div class="carousel-caption">
+					<h3>Machineshop</h3>
+					<p>Building the next generation machines</p>
+				    </div>
+				</div>
+
+				<div class="item">
+				    <img src="{%static 'img/EE%20area.jpg' %}" alt="Picture of the Electrical Engineering area">
+				    <div class="carousel-caption">
+					<h3>Electrical Engineering Area</h3>
+					<p>Test circuits and build chips</p>
+				    </div>
+				</div>
+			    </div>
+
+			    <!-- Left and right controls -->
+			    <a class="left carousel-control" role="button">
+				<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+				<span class="sr-only">Previous</span>
+			    </a>
+			    <a class="right carousel-control" role="button">
+				<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+				<span class="sr-only">Next</span>
+			    </a>
+			</div>
+			<!-- </div> -->
+		    </div>
+		</div>
+		<!-- </div> -->
+	    </div>
+	</div>
+
+	<div class="row" id="events">
+	    <div class="col-xs-12">
+		<h1 id="events-header">
+		    Events
+		</h1>
+	    </div>
+	    <div class="col-md-4" id="event-container">
+		<div class="col-xs-8" id="event-img-container">
+		    <div id="event-head"> 
+			<h3 id ="event-name" >Event Name</h3>
+
+			<h5 id="event-descp">Month, Day Time in Event Space</h5>
+		    </div>
+		    <h1>Max Height 300px. Will resize proportionally according to size of screen</h1></div>
+		<!-- <div class="col-xs-1"></div> -->
+	    </div>
+	    <div class="col-md-4" id="event-container">
+		<div class="col-xs-1"></div>	
+		<div class="col-xs-10" id="event-img-container">
+		    <h1>Max Height 300px. Will resize proportionally according to size of screen</h1></div>
+		<div class="col-xs-1"></div>
+	    </div>
+	    <div class="col-md-4" id="event-container">
+		<div class="col-xs-1"></div>
+		<div class="col-xs-10" id="event-img-container">
+		    <h1>Max Height 300px. Will resize proportionally according to size of screen</h1></div>
+		<div class="col-xs-1"></div>
+	    </div>
+	</div>
+
+	<!-- Stream Section -->
+	<div class="row" id="stream">
+	    <div class="col-xs-12">
+		<h1 id="contact-header">
+		    Live Stream
+		</h1>
+	    </div>
+
+	    <div id="live-stream">
+		<button type="button" id="button-live-stream" data-toggle="modal" data-target="#live-stream">
+		    Coming Soon!
+		</button>
+
+		<div id="live-stream" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+			    </div>
+			    <div class="modal-body">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/dW1BIid8Osg" frameborder="0" allowfullscreen></iframe>
+			    </div>
+			</div>
+		    </div>
+
+		</div>
+	    </div>
+	</div>
+	
+	<!-- Contact Section -->
+	<div class="row" id="contact">
+	    <div class="col-xs-12">
+		<h1 id="contact-header">
+		    Contact
+		</h1>
+	    </div>
+	    <form id="contact-form" onsubmit="submitForm()">
+		<div class="col-xs-12 col-sm-6" id="options-container">
+		    <div class="col-xs-12">
+			<input id="name" placeholder="Your Full Name" required>
+		    </div>
+		    <div class="col-xs-12">
+			<input id="email" placeholder="Your Email Address" type="email" required>
+		    </div>
+		    <div class="col-xs-12">
+			<select id="subject" name="Subject">
+			    <!-- select proper subject from notebook-->
+			    <option value="1">Suggestions</option>
+			    <option value="2">Something is broken at MakerSpace</option>
+			    <option value="3">I found a bug in the website</option>
+			    <option value="4">Inquiry on services</option>
+			    <option value="5">General Info</option>
+			    <option value="6">Reservations</option>
+			</select>
+		    </div>
+		</div>
+		<div class="col-xs-12 col-sm-6" id="message-container">
+		    <textarea id="message" placeholder="Write your message here"></textarea>
+		</div>
+		<div class="col-xs-12">
+		    <input id="submit-btn" type="submit" value="Send Email"><span id="status"></span>
+		</div>
+	    </form>
+	</div>
+	<div class="row" id="map">
+	    <div class="col-xs-12">
+		<div class="col-xs-12 col-sm-6">
+		    <iframe id="google-map" src="https://www.google.com/maps/d/u/0/embed?mid=1gGjYY2DTVf6VSmoR4Iq6Thiz3uA"></iframe>
+		</div>
+
+		<div class="col-xs-12 col-sm-6">
+		    <h2>NYU MakerSpace</h2>
+		    <h4>6 MetroTech Center</h4>
+		    <h4>Brooklyn, NY</h4>
+		    <h4>11201</h4>
+		    <h4>(646)-997-3058</h4>
+		</div>
+	    </div>
+	</div>
+	<div class="row" id="footer">
+	    <div class="col-sm-1"></div>
+	    <div class="col-sm-4 col-xs-12" id="social-media">
+	
+		<a href="https://www.instagram.com/nyumakerspace/"><img id="social-icon" src="{%static 'img/icons/instagram.svg' %}" alt="instagram icon"></a>
+		<a href="https://twitter.com/nyumakerspace?lang=en"><img id="social-icon" src="{%static 'img/icons/twitter.svg' %}" alt="twitter icon"></a>
+		<!-- <img id="social-icon" class="snapchat" src="{%static 'img/icons/snapchat.svg' %}" alt="snapchat icon"> -->
+	    </div>
+	    <div class="col-sm-2"></div>
+	    <div class="col-sm-4 col-xs-12" id="credits">
+		<p id="copyright">NYU MakerSpace &#169; 2017 -
+		    <button type="button" id="button-credits" data-toggle="modal" data-target="#credits-modal">credits</button> - <a href="style-guide.html">style guide</a>
+		</p>
+
+		<div id="credits-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		    <div class="modal-dialog">
+			<div class="modal-content">
+			    <div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+				<h1 class="modal-title" id="myModalLabel">Credits</h1>
+			    </div>
+			    <div class="modal-body">
+				<h3>Special thanks to the writers, authors and owner of the following links for their help and guidance:</h3>
+				<ul>
+				    <li><a href="https://stackoverflow.com/questions/11978995/how-to-change-color-of-svg-image-using-css-jquery-svg-image-replacement/11978996#11978996?newreg=e366aae55a674b8eb2c480be4be89981">Stack Overflow: How to change color of SVG image using CSS (jQuery SVG image replacement)?</a></li>
+				    <li><a href="http://www.w3schools.com/bootstrap/tryit.asp?filename=trybs_ref_js_carousel_js&stacked=h">W3Schools: Activate Carousel with JavaScript</a></li>
+				    <li><a href="https://stackoverflow.com/questions/18622508/bootstrap-3-and-youtube-in-modal">Stack Overflow: Bootstrap 3 and Youtube in Modal</a></li>
+				    <li><a href="https://www.developphp.com/video/JavaScript/Contact-Form-Web-Application-Tutorial-Ajax-HTML5-PHP">Develop PHP: Contact Form Web Application Tutorial Ajax HTML5 PHP</a></li>
+				    <li><a href="http://www.flaticon.com/packs/social-media-logos-2">Flaticon: Social Media Logos</a></li>
+				</ul>
+			    </div>
+			</div>
+		    </div>
+		</div>
+
+	    </div>
+	    <div class="col-sm-1"></div>
+	</div>
+	    </div>
+
+    </body>
+
+</html>
